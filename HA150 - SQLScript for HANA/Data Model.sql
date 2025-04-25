@@ -12,10 +12,12 @@
 -- There is a list of vehicles that have been reported stolen.
 -- Owners, who have at least three vehicles registered, are assigned to one or multiple contacts.
 
--- NOTE: If facing any issue due to Auto Commit DDL is ON, wrap the code in a Anonymous Procedure block, so that DDL Commit will be Off.
 
-DO
-  BEGIN
+CREATE PROCEDURE setup()
+LANGUAGE SQLSCRIPT
+AUTOCOMMIT DDL OFF
+AS
+BEGIN
   -- Table Definition: Official
   CREATE COLUMN TABLE Official(
     PNR VARCHAR(3) PRIMARY KEY,
@@ -125,3 +127,6 @@ DO
   INSERT INTO Stolen VALUES('HD-Y 333','2012-05-21');
 
 END;
+
+
+CALL set_up();
