@@ -12,7 +12,7 @@
 -- There is a list of vehicles that have been reported stolen.
 -- Owners, who have at least three vehicles registered, are assigned to one or multiple contacts.
 
--- NOTE: If facing any issue due to Auto Commit DML is ON, wrap the code in a Anonymous Procedure block, so that DML Commit will be Off.
+-- NOTE: If facing any issue due to Auto Commit DDL is ON, wrap the code in a Anonymous Procedure block, so that DDL Commit will be Off.
 
 DO
 BEGIN
